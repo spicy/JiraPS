@@ -84,9 +84,8 @@ function Get-JiraIssueCreateMetadata {
                 }
                 Write-Error @errorMessage
             }
-
-            # ***Seems*** unnecessary for my purposes.
-            # Write-Output (ConvertTo-JiraCreateMetaField -InputObject $result)
+            
+            Write-Output (ConvertTo-JiraCreateMetaField -InputObject $result)
         }
         else {
             $exception = ([System.ArgumentException]"No results")
